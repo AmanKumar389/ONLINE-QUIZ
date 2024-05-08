@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Quiz Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#create">Create Quiz</a></li>
+                <li><a href="#take">Take Quiz</a></li>
+                <li><a href="#browse">Browse Quizzes</a></li>
+                <li><a href="#login">Login / Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="create">
+        <h2>Create Quiz</h2>
+        <form action="#" method="post" id="quiz-form">
+            <label for="quiz-title">Quiz Title:</label><br>
+            <input type="text" id="quiz-title" name="quiz-title" required><br><br>
+            
+            <div id="questions-container">
+                <div class="question">
+                    <label for="question-1">Question 1:</label><br>
+                    <input type="text" id="question-1" name="question-1" required><br>
+                    <label for="answer-1">Answers:</label><br>
+                    <input type="text" id="answer-1" name="answer-1" required><br>
+                    <input type="checkbox" id="correct-1" name="correct-1" value="1" required>
+                    <label for="correct-1">Correct Answer</label><br><br>
+                </div>
+            </div>
+
+            <button type="button" id="add-question">Add Question</button><br><br>
+            <button type="submit">Create Quiz</button>
+        </form>
+    </section>
+
+    <section id="take" style="display: none;">
+        <h2>Take Quiz</h2>
+        <div id="quiz-container">
+        
+        </div>
+        <button id="submit-quiz">Submit Quiz</button>
+        <div id="quiz-results" style="display: none;">
+        </div>
+    </section>
+
+    <section id="browse">
+        <h2>Browse Quizzes</h2>
+    </section>
+
+    <section id="login">
+        <h2>Login / Register</h2>
+    </section>
+
+    <footer>
+        <p>&copy;Quiz Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+                                               CSS CODE
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #51994c;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #9b1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #a4353c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-options label {
+    margin-bottom: 10px;
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz-submit {
+    text-align: center;
+}
+
+.quiz-results {
+    margin-top: 20px;
+}
